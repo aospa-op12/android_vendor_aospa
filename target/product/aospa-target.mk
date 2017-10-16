@@ -188,6 +188,10 @@ ifneq ($(filter STABLE BETA,$(AOSPA_BUILDTYPE)),)
 PRODUCT_PACKAGES += ParanoidHub
 endif
 
+# Lineage-specific broadcast actions whitelist
+PRODUCT_COPY_FILES += \
+    vendor/aospa/target/config/sysconfig/lineage-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lineage-sysconfig.xml
+
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/aospa/target/config/permissions/default_permissions_com.google.android.deskclock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default_permissions_com.google.android.deskclock.xml \
