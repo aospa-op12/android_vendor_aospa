@@ -60,7 +60,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Dexpreopt
 # Don't dexpreopt prebuilts. (For GMS).
+ifneq ($(TARGET_DISABLES_GMS), true)
 DONT_DEXPREOPT_PREBUILTS := true
+endif
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep \
@@ -94,10 +96,12 @@ PRODUCT_PACKAGES += \
     vendor.aospa.power-service
 
 # Google - GMS, Pixel, and Mainline Modules
+ifneq ($(TARGET_DISABLES_GMS), true)
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
 ifneq ($(TARGET_EXCLUDE_GMODULES), true)
 $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.mk)
+endif
 endif
 
 PRODUCT_PRODUCT_PROPERTIES += \
