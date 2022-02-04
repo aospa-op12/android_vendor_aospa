@@ -92,6 +92,9 @@ ifneq ($(TARGET_DISABLES_GMS), true)
 DONT_DEXPREOPT_PREBUILTS := true
 endif
 
+# Optimize everything for preopt
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep \
     ParanoidSystemUI
