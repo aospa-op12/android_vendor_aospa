@@ -157,3 +157,8 @@ endif
 
 # Pass board platform to kernel build
 TARGET_KERNEL_ADDITIONAL_FLAGS += TARGET_BOARD_PLATFORM=$(TARGET_BOARD_PLATFORM)
+
+# Qualcomm kernel.
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+endif
