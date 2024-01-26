@@ -103,7 +103,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.systemuicompilerfilter=speed
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Launcher3QuickStep \
+    NexusLauncherRelease \
     ParanoidSystemUI
 
 PRODUCT_PROPERTY_OVERRIDES += \
