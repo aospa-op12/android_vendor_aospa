@@ -34,4 +34,7 @@
     <!-- Biometric Dialog values -->
     <integer name="biometric_dialog_text_gravity">1</integer> <!-- CENTER_HORIZONTAL -->
 
+    <!-- Launcher package name for overlaying icons. -->
+    <string name="launcher_overlayable_package" translatable="false">com.google.android.apps.nexuslauncher</string>
+
 </resources>
