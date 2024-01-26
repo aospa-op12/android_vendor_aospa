@@ -101,7 +101,7 @@ DONT_DEXPREOPT_PREBUILTS := true
 endif
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Launcher3QuickStep \
+    NexusLauncherRelease \
     ParanoidSystemUI
 
 PRODUCT_PROPERTY_OVERRIDES += \
