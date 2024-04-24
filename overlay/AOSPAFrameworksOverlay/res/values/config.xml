@@ -152,4 +152,113 @@
          SystemUI. Can be -1 if there is no minimum limit. -->
     <integer name="config_minNumVisibleRecentTasks">30</integer>
 
+    <!-- Define device configs on boot -->
+    <string-array name="global_device_configs_override">
+        <!--
+            Platform namespaces (alphabetical by DeviceConfig namespace)
+        -->
+
+        <!-- Pixel Launcher: long-press nav handle (LPNH) -->
+        <item>launcher/ANIMATE_LPNH=true</item>
+        <item>launcher/CUSTOM_LPNH_THRESHOLDS=true</item>
+        <item>launcher/ENABLE_LPNH_TWO_STAGES=true</item>
+        <item>launcher/LPNH_HAPTIC_HINT_DELAY=0</item>
+        <item>launcher/LPNH_HAPTIC_HINT_ITERATIONS=50</item>
+        <item>launcher/LPNH_TIMEOUT_MS=450</item>
+        <item>launcher/SHRINK_NAV_HANDLE_ON_PRESS=true</item>
+        <item>launcher/TWO_STAGE_DURATION_PERCENTAGE=200</item>
+        <item>launcher/TWO_STAGE_SLOP_PERCENTAGE=66</item>
+
+        <!-- Pixel Launcher: search and suggestions -->
+        <item>launcher/enable_one_search=true</item>
+        <item>launcher/enable_one_search_aa=true</item>
+        <item>launcher/enable_quick_launch_v3_aa=true</item>
+        <item>launcher/ENABLE_SEARCH_HAPTIC_HINT=true</item>
+        <item>launcher/gboard_update_enter_key=true</item>
+        <item>launcher/PSB_RESKIN=true</item>
+
+        <!-- Pixel Launcher: widgets and data access -->
+        <item>launcher/android.provider.launcher_data_access=true</item>
+        <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=false</item>
+        <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
+
+        <!-- Recents (Pixel Launcher overview) -->
+        <item>device_personalization_services/Overview__enable_barcode_detection=true</item>
+        <item>device_personalization_services/Overview__enable_image_search=true</item>
+        <item>device_personalization_services/Overview__enable_image_selection=true</item>
+        <item>device_personalization_services/Overview__enable_japanese_ocr=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
+        <item>device_personalization_services/Overview__enable_overview=true</item>
+        <item>device_personalization_services/Overview__enable_superpacks_pir_protocol=true</item>
+        <item>device_personalization_services/SmartRecOverviewChips__enable_matchmaker_generator=true</item>
+        <item>device_personalization_services/SmartRecOverviewChips__enable_smartrec_for_overview_chips=true</item>
+        <item>device_personalization_services/SmartRecOverviewChips__nasa_superpacks_manifest_url=https://www.gstatic.com/nasa/apps/non_en_pack_02072023/23020800/2/en-us/superpacks_manifest.zip</item>
+        <item>device_personalization_services/SmartRecOverviewChips__nasa_superpacks_manifest_ver=2023020700</item>
+
+        <!-- Smartspace -->
+        <item>device_personalization_services/Echo__smartspace_dedupe_fast_pair_notification=true</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=false</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_allowlist_packages=com.nest.android, com.google.android.apps.chromecast.app, com.ringapp</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_loading_screen_state=4</item>
+        <item>device_personalization_services/Echo__smartspace_enable_battery_notification_parser=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_bluetooth_metadata_parser=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_cross_device_timer=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_earthquake_alert_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_eta_lyft=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_food_delivery_eta=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_grocery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_off_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_predictor=false</item>
+        <item>device_personalization_services/Echo__smartspace_enable_outlook_events=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_package_delivery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_ridesharing_eta=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_safety_check_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_score_ranker=WEIGHTED</item>
+        <item>device_personalization_services/Echo__smartspace_enable_sensitive_notification_twiddler=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_subcard_logging=true</item>
+        <item>device_personalization_services/Echo__smartspace_outlook_event_source_of_truth=TEXT_ONLY</item>
+        <item>device_personalization_services/Echo__smartspace_package_delivery_card_delay_seconds=0</item>
+        <item>device_personalization_services/Echo__smartspace_show_cross_device_timer_label=true</item>
+        <item>device_personalization_services/EchoSmartspace__check_notification_visibility=true</item>
+        <item>device_personalization_services/EchoSmartspace__doorbell_when_for_update_time=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_add_card_explanation_button_on_long_press=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_ambient_data_predictor=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_calendar_ambient_data=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_commute_ambient_data=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_consolidated_weather=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_dimensional_logging=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_encode_subcard_into_smartspace_target_id=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_finance_recap_ambient_data=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_flight_landing_smartspace_aiai=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_hotel_smartspace_aiai=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_loud_sound_alert=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_my_pixel_ambient_data=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_predictor_expiration=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_remote_views_hub_mode_timer=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_remote_views_mobile_hub_mode_timer=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_settings_highlight=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_show_on_home_screen_toggle=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_sports_card_explanation=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_sports_score_ambient_data=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_sports_score_background_container=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_subzero_ambient_data=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_thing_ambient_data=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_travel_features_type_merge=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_trip_bundle_ambient_data=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_wallet_suggestions=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_weather_data_extras=true</item>
+        <item>device_personalization_services/EchoSmartspace__loud_sound_snooze_duration_minutes=30</item>
+        <item>device_personalization_services/EchoSmartspace__loud_sound_test_threshold_db=0</item>
+        <item>device_personalization_services/EchoSmartspace__loud_sound_test_threshold_duration_seconds=30</item>
+        <item>device_personalization_services/EchoSmartspace__ring_lockscreen_delay_seconds=0</item>
+        <item>device_personalization_services/EchoSmartspace__ring_on_aod_only=true</item>
+        <item>device_personalization_services/EchoSmartspace__show_background_switch=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_daily_forecast=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_timely_reminder=true</item>
+    </string-array>
+
 </resources>
