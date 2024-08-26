@@ -82,6 +82,10 @@ endif
 PRODUCT_PACKAGES += \
     curl
 
+# Dex
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
+
 # Dex2oat
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
