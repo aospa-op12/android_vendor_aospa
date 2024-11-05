@@ -35,6 +35,7 @@ $(call inherit-product-if-exists, vendor/aospa-priv/target/product/aospa-priv-ta
 ifeq ($(TARGET_DISABLES_GMS), true)
 # Vanilla apps
 PRODUCT_PACKAGES += \
+    AvatarPicker \
     Dialer \
     Etar \
     ExactCalculator \
