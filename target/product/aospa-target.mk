@@ -36,9 +36,7 @@ ifeq ($(TARGET_DISABLES_GMS), true)
 # Vanilla apps
 PRODUCT_PACKAGES += \
     AvatarPicker \
-    Etar \
     ExactCalculator \
-    Glimpse \
     Jelly \
     LatinIME
 
@@ -191,6 +189,21 @@ endif
 # Lineage-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
     vendor/aospa/target/config/sysconfig/lineage-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lineage-sysconfig.xml
+
+# Lineage apps
+PRODUCT_PACKAGES += \
+    Camelot \
+    Canvas \
+    Etar \
+    Glimpse \
+    Recorder \
+    Twelve
+
+# Updater
+ifeq ($(TARGET_INCLUDE_UPDATER), true)
+PRODUCT_PACKAGES += \
+    Updater
+endif
 
 # LMOFreeform
 PRODUCT_PACKAGES += \
