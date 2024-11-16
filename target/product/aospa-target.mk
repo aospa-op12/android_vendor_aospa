@@ -198,6 +198,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     vendor/aospa/target/config/sysconfig/lineage-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lineage-sysconfig.xml
 
+# Twelve
+PRODUCT_PACKAGES += \
+    Twelve
+
 # LMOFreeform
 PRODUCT_PACKAGES += \
     LMOFreeform \
