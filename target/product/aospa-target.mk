@@ -28,11 +28,15 @@ ifeq ($(TARGET_DISABLES_GMS), true)
 # Vanilla apps
 PRODUCT_PACKAGES += \
     AvatarPicker \
-    Dialer \
     Etar \
     ExactCalculator \
     Jelly \
     LatinIME
+
+ifneq ($(TARGET_NO_TELEPHONY), true)
+PRODUCT_PACKAGES += \
+    Dialer
+endif
 endif
 
 # APNs
