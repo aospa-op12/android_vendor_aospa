@@ -133,6 +133,8 @@ $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.m
 endif
 else
 $(warning Building Without GMS)
+$(warning Building With microG)
+$(call inherit-product-if-exists, vendor/partner_gms/products/gms.mk)
 endif
 
 # HIDL
