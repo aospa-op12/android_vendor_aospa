@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <string-array name="configs_first_boot_base">
+        <item>global/adb_enabled=1</item>
+        <item>global/adb_allowed_connection_time=0</item>
+        <item>global/development_settings_enabled=1</item>
+        <item>system/screen_off_timeout=1800000</item>
+    </string-array>
+
+</resources>

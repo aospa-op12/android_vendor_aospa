@@ -12,6 +12,7 @@ PRODUCT_PACKAGES += \
     AOSPANetworkStackMainlineOverlay \
     AOSPASettingsOverlay \
     AOSPASettingsProviderOverlay \
+    AOSPASimpleSettingsConfigOverlay \
     AOSPASystemUIOverlay \
     FontGoogleSansOverlay \
     FontHarmonySansOverlay \
