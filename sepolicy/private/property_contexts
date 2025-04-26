@@ -6,3 +6,6 @@ persist.sys.pihooks.disable.            u:object_r:pih_disable_prop:s0
 
 # Tethering
 persist.device_config.tethering.        u:object_r:device_config_tethering_prop:s0
+
+# USB
+ro.usb.uvc.disable_video_encode_flag   u:object_r:usb_uvc_config_prop:s0
