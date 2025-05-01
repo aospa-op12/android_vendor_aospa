@@ -14,27 +14,7 @@
   <project path="vendor/oneplus/sm8650-common" name="aospa-op12/proprietary_vendor_oneplus_sm8650-common" remote="aospa" revision="vauxite" clone-depth="1" /> -->
 
   <!-- Kernel -->
-  <!-- <remove-project name="AOSPA/android_kernel_build" />
-  <remove-project name="aospa-op12/android_build_soong" />
-  <remove-project name="aospa-op12/android_device_qcom_common" />
-  <remove-project name="aospa-op12/android_hardware_qcom_display" />
-  <remove-project name="aospa-op12/android_vendor_aospa" />
-  <project path="build/soong" name="aospa-op12/android_build_soong" remote="aospa" revision="vauxite-los-kernel" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
-  <project path="device/qcom/common" name="aospa-op12/android_device_qcom_common" remote="aospa" revision="vauxite-los-kernel" >
-    <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
-  </project>
-  <project path="hardware/qcom/display" name="aospa-op12/android_hardware_qcom_display" remote="aospa" revision="vauxite-8650-los-kernel" />
-  <project path="vendor/aospa" name="aospa-op12/android_vendor_aospa" remote="aospa" revision="vauxite-los-kernel" >
-    <linkfile src="build.sh" dest="rom-build.sh" />
-  </project>
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="github" revision="lineage-19.1" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="github" revision="lineage-19.1" clone-depth="1" />
-  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" remote="aosp" revision="refs/tags/android-15.0.0_r0.69" clone-depth="1" />
-  <project path="prebuilts/tools-lineage" name="LineageOS/android_prebuilts_tools-lineage" remote="github" revision="10b65c9a4181390c2258a8c4f947e31f649b6756" />
-  <project path="kernel/oneplus/sm8650" name="YumeMichi/kernel_oneplus_sm8650" remote="github" revision="vauxite" />
-  <project path="kernel/oneplus/sm8650-devicetrees" name="yaap/kernel_oneplus_sm8650-devicetrees" remote="github" revision="fifteen" />
-  <project path="kernel/oneplus/sm8650-modules" name="yaap/kernel_oneplus_sm8650-modules" remote="github" revision="fifteen" /> -->
+  <!-- <project path="kernel/oneplus/sm8650" name="YumeMichi/kernel_oneplus_sm8650" remote="github" revision="vauxite" />
+  <project path="kernel/oneplus/sm8650-devicetrees" name="aospa-op12/android_kernel_oneplus_sm8650-devicetrees" remote="github" revision="vauxite" />
+  <project path="kernel/oneplus/sm8650-modules" name="aospa-op12/android_kernel_oneplus_sm8650-modules" remote="github" revision="vauxite" /> -->
 </manifest>
