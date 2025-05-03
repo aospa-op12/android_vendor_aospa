@@ -15,6 +15,6 @@
 
   <!-- Kernel -->
   <!-- <project path="kernel/oneplus/sm8650" name="YumeMichi/kernel_oneplus_sm8650" remote="github" revision="vauxite" />
-  <project path="kernel/oneplus/sm8650-devicetrees" name="aospa-op12/android_kernel_oneplus_sm8650-devicetrees" remote="github" revision="vauxite" />
-  <project path="kernel/oneplus/sm8650-modules" name="aospa-op12/android_kernel_oneplus_sm8650-modules" remote="github" revision="vauxite" /> -->
+  <project path="kernel/oneplus/sm8650-devicetrees" name="yaap/kernel_oneplus_sm8650-devicetrees" remote="github" revision="fifteen" />
+  <project path="kernel/oneplus/sm8650-modules" name="yaap/kernel_oneplus_sm8650-modules" remote="github" revision="fifteen" /> -->
 </manifest>
