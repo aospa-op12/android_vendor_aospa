@@ -237,6 +237,7 @@ PRODUCT_PACKAGES += \
     htop \
     nano \
     setcap \
+    strace \
     vim
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
