@@ -230,6 +230,55 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/aospa/target/config/sysconfig/lineage-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lineage-sysconfig.xml
 
+# Extra tools in Lineage
+PRODUCT_PACKAGES += \
+    curl \
+    getcap \
+    htop \
+    nano \
+    setcap \
+    vim
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/curl \
+    system/bin/getcap \
+    system/bin/setcap
+
+# Filesystems tools
+PRODUCT_PACKAGES += \
+    fsck.ntfs \
+    mkfs.ntfs \
+    mount.ntfs
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/fsck.ntfs \
+    system/bin/mkfs.ntfs \
+    system/bin/mount.ntfs \
+    system/%/libfuse-lite.so \
+    system/%/libntfs-3g.so
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
+
+PRODUCT_COPY_FILES += \
+    vendor/aospa/prebuilts/etc/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
+
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
+
+# Extra cmdline tools
+PRODUCT_PACKAGES += \
+    unrar \
+    zstd
+
 # Twelve
 PRODUCT_PACKAGES += \
     Twelve
