@@ -1,2 +1,5 @@
 # Allow system_app to read the AOSPA version.
 get_prop(system_app, aospa_build_prop)
+
+# Lid
+set_prop(system_app, lid_disable_prop)
