@@ -1,3 +1,6 @@
+# Lid
+system_public_prop(lid_disable_prop)
+
 # PIHooks
 system_public_prop(pih_disable_prop)
 

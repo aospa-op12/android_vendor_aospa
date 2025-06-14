@@ -1,0 +1,2 @@
+# Lid
+set_prop(system_app, lid_disable_prop)

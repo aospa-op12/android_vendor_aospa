@@ -1,3 +1,6 @@
+# Lid
+persist.debug.disable_lid_state         u:object_r:lid_disable_prop:s0
+
 # PIHooks
 persist.sys.pihooks.disable.            u:object_r:pih_disable_prop:s0
 
