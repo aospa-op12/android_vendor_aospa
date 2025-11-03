@@ -280,6 +280,10 @@ PRODUCT_PACKAGES += \
     unrar \
     zstd
 
+# SimpleSettingsConfig
+PRODUCT_PACKAGES += \
+    SimpleSettingsConfig
+
 # Twelve
 PRODUCT_PACKAGES += \
     Twelve
