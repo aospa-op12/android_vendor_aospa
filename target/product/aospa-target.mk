@@ -222,7 +222,9 @@ PRODUCT_PACKAGES += \
     extphonelib.xml \
     extphonelib_product.xml \
     ims-ext-common \
-    ims_ext_common.xml
+    ims_ext_common.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
 
 ifneq ($(TARGET_NO_TELEPHONY), true)
 PRODUCT_PACKAGES += \
@@ -232,9 +234,7 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper-prd \
     qti_telephony_hidl_wrapper.xml \
     qti_telephony_hidl_wrapper_prd.xml \
-    qti-telephony-utils \
     qti-telephony-utils-prd \
-    qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml
 
 # Telephony - AOSP
