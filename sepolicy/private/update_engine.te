@@ -1,5 +1,6 @@
 # Allow update_engine to call the callback function provided by updater_app
 binder_call(update_engine, hub_app)
+binder_call(update_engine, updater_app)
 
 # Allow update_engine to read the payload ParanoidHub hands over as an open file
 allow update_engine hub_app:fd use;
