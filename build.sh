@@ -259,6 +259,7 @@ elif [ "${KEY_MAPPINGS}" ]; then
             aospa-$AOSPA_VERSION.zip
 
         checkExit
+        OTA_PACKAGES+=("$DIR_ROOT/aospa-$AOSPA_VERSION.zip")
 
         if [ "$DELTA_TARGET_FILES" ]; then
             # die if base target doesn't exist
@@ -271,6 +272,7 @@ elif [ "${KEY_MAPPINGS}" ]; then
                 aospa-$AOSPA_VERSION-signed-target_files.zip \
                 aospa-$AOSPA_VERSION-delta.zip
             checkExit
+            OTA_PACKAGES+=("$DIR_ROOT/aospa-$AOSPA_VERSION-delta.zip")
         fi
     fi
 # Build rom package
@@ -292,12 +294,25 @@ else
     checkExit
 
     cp -f $OUT/aospa_$DEVICE-ota.zip $OUT/aospa-$AOSPA_VERSION.zip
-    echo "Package Complete: $OUT/aospa-$AOSPA_VERSION.zip"
+    OTA_PACKAGES+=("$OUT/aospa-$AOSPA_VERSION.zip")
 fi
 echo -e ""
 
 # Check the finishing time
 TIME_END=$(date +%s.%N)
+
+if [ "${#OTA_PACKAGES[@]}" -gt 0 ]; then
+    COMPLETION_TIMESTAMP=${TIME_END%.*}
+    COMPLETION_TIME=$(date -d "@$COMPLETION_TIMESTAMP" '+%Y-%m-%d %H:%M:%S')
+
+    for OTA_PACKAGE in "${OTA_PACKAGES[@]}"; do
+        echo "Package Complete: $OTA_PACKAGE"
+        echo "SHA256: $(sha256sum "$OTA_PACKAGE" | awk '{print $1}')"
+        echo "Size: $(stat -c%s "$OTA_PACKAGE") bytes"
+        echo "Completion time: $COMPLETION_TIME ($COMPLETION_TIMESTAMP)"
+    done
+    echo -e ""
+fi
 
 # Log those times at the end as a fun fact of the day
 echo -e "${CLR_BLD_GRN}Total time elapsed:${CLR_RST} ${CLR_GRN}$(echo "($TIME_END - $TIME_START) / 60" | bc) minutes ($(echo "$TIME_END - $TIME_START" | bc) seconds)${CLR_RST}"
