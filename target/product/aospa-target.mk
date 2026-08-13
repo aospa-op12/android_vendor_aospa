@@ -202,6 +202,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Twelve
 
+# Updater
+ifeq ($(TARGET_INCLUDE_UPDATER), true)
+PRODUCT_PACKAGES += \
+    Updater
+endif
+
 # LMOFreeform
 PRODUCT_PACKAGES += \
     LMOFreeform \
