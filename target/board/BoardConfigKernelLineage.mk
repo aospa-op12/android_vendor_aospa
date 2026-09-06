@@ -25,7 +25,7 @@
 #   TARGET_KERNEL_CLANG_VERSION        = Clang prebuilts version, optional, defaults to clang-stable
 #   TARGET_KERNEL_CLANG_PATH           = Clang prebuilts path, optional
 #
-#   TARGET_KERNEL_LIBC_SYSROOT_USE     = libc sysroot to use, defaults to "host" for 6.11+
+#   TARGET_KERNEL_LIBC_SYSROOT_USE     = libc sysroot to use, defaults to "host" for 6.1+
 #
 #   TARGET_KERNEL_RUST_VERSION         = Rust prebuilts version, optional
 #   TARGET_KERNEL_VERSION              = Reported kernel version in top level kernel
@@ -64,9 +64,9 @@ KERNEL_VERSION := $(shell grep -s "^VERSION = " $(TARGET_KERNEL_SOURCE)/Makefile
 KERNEL_PATCHLEVEL := $(shell grep -s "^PATCHLEVEL = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
 TARGET_KERNEL_VERSION ?= $(shell echo $(KERNEL_VERSION)"."$(KERNEL_PATCHLEVEL))
 
-# 6.11+ can no longer use aosp glibc sysroot headers (too old)
+# 6.1+ can no longer use aosp glibc sysroot headers (too old)
 ifneq ($(KERNEL_VERSION),)
-    ifeq ($(call is-version-greater-or-equal,$(TARGET_KERNEL_VERSION),6.11),true)
+    ifeq ($(call is-version-greater-or-equal,$(TARGET_KERNEL_VERSION),6.1),true)
         TARGET_KERNEL_LIBC_SYSROOT_USE ?= host
     endif
 endif
