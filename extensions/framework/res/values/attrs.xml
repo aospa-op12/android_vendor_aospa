@@ -33,5 +33,6 @@
         <attr name="textStart" format="string|reference" />
         <attr name="textEnd" format="string|reference" />
         <attr name="showButtons" format="boolean" />
+        <attr name="showTicks" format="boolean" />
     </declare-styleable>
 </resources>
