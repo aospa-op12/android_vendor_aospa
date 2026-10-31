@@ -10,5 +10,7 @@ android_library {
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
+        "com.google.android.material_material",
+        "SettingsLibSettingsTheme",
     ],
 }
