@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomSeekBarSlider" parent="SettingslibSliderStyle.Expressive">
+        <item name="trackHeight">16dp</item>
+        <item name="trackInsideCornerSize">2dp</item>
+        <item name="trackStopIndicatorSize">4dp</item>
+        <item name="thumbWidth">4dp</item>
+        <item name="thumbHeight">44dp</item>
+        <item name="thumbElevation">0dp</item>
+        <item name="thumbStrokeWidth">0dp</item>
+        <item name="thumbTrackGapSize">6dp</item>
+    </style>
+</resources>
