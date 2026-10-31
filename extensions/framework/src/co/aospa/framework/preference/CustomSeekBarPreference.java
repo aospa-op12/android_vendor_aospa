@@ -46,6 +46,7 @@ public class CustomSeekBarPreference extends Preference implements Slider.OnChan
     protected boolean mContinuousUpdates = false;
     protected String mTextStart, mTextEnd;
     protected boolean mShowButtons;
+    protected boolean mShowTicks = true;
 
     protected int mMinValue = 0;
     protected int mMaxValue = 100;
@@ -75,6 +76,7 @@ public class CustomSeekBarPreference extends Preference implements Slider.OnChan
             mTextStart = a.getString(R.styleable.CustomSeekBarPreference_textStart);
             mTextEnd = a.getString(R.styleable.CustomSeekBarPreference_textEnd);
             mShowButtons = a.getBoolean(R.styleable.CustomSeekBarPreference_showButtons, true);
+            mShowTicks = a.getBoolean(R.styleable.CustomSeekBarPreference_showTicks, mShowTicks);
         } finally {
             a.recycle();
         }
@@ -126,7 +128,7 @@ public class CustomSeekBarPreference extends Preference implements Slider.OnChan
         mSlider.setValueFrom(mMinValue);
         mSlider.setValueTo(mMaxValue);
         mSlider.setStepSize(getSliderStepSize());
-        mSlider.setTickVisible(getSliderStepSize() > 0);
+        mSlider.setTickVisible(mShowTicks && getSliderStepSize() > 0);
         mSlider.setValue(getLimitedValue(mValue));
         mSlider.setEnabled(isEnabled());
         mSlider.setClickable(isSelectable());
