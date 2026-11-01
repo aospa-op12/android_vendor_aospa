@@ -192,6 +192,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/aospa/target/config/sysconfig/lineage-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lineage-sysconfig.xml
 
+# Etar
+PRODUCT_PACKAGES += \
+    Etar
+
 # Twelve
 PRODUCT_PACKAGES += \
     Twelve
